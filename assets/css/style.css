@@ -1,0 +1,52 @@
+/* Normalize------
+body,h1,h2,h3,h4,h5,p,section,article,div,nav,footer,ul,li,ol{margin: 0;padding: 0;}
+/*Normalize------*/
+nav{
+    border-bottom: solid #729E2E 5px;
+    box-shadow: 0px 5px 0 #507C0C;
+}
+body{
+    background-color: #35313C;
+    font-family: 'Orbitron', sans-serif;;
+}
+.main-logo{
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+
+h1{
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    padding-left: 1rem;
+}
+
+h3{
+    padding: 1rem .5rem;
+    border-bottom: #507C0C solid 3px;
+}
+
+.card{
+    background-color: #1B1C20;
+    min-height: 410px;
+}
+.card-title{
+    color:#fff
+}
+.card-text{
+    color:#729E2E
+}
+
+.btn{
+    background-color:#507C0C;
+    color: #fff;
+}
+
+footer{
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    border-top: solid #729E2E 5px;
+    box-shadow: 0px -5px 0 #507C0C;
+    font-weight: 700;
+}

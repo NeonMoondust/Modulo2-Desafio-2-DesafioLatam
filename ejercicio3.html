@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Desafio 4 de Desafio Latam</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo de Desafio Latam" class="main-logo"></a>
+          <h1 class="text-center">Desafio 4 de Desafio Latam</h1>
+          <button class="navbar-toggler w-100" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ejercicio1.html">Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ejercicio2.html">Colors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./ejercicio3.html">Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div>
+        <div>
+            <h2 style="color: #fff;margin: 2rem 2rem;">
+                Resultado: <span style="color: #729E2E;" class="resultado"></span>
+            </h2>
+            <div>
+                <div style="color: #729E2E">
+                    <div>
+                        <label style="margin: 1rem 1.2rem;" for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label style="margin: 1rem 1rem;" for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex;margin: 1rem;">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button style="margin-left: 1rem;" id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="position:absolute; bottom: 0; width: 100%;">
+        <div class="container mt-1">
+            <div class="row">
+                <div class="col-md-6 text-center text-light">
+                    <h4 class="mt-4">Cristobal Nicolas Gonzalez Ibañez</h4>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="assets/img/logo.png" alt="Logo de Desafio Latam" class="main-logo mt-2">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const values = document.querySelectorAll('input');
+        const buttons = document.querySelectorAll('button');
+
+        function operate(toOperate){
+            let result = 0;
+            switch(toOperate){
+                case 'sumar':
+                    result = Number(values[0].value) + Number(values[1].value);
+                    break;
+                case 'restar':
+                    result = Number(values[0].value) - Number(values[1].value);
+                    break;
+            }
+            document.getElementsByClassName('resultado')[0].innerHTML = (result > 0) ? result : 0;
+        }
+
+        buttons[1].onclick = () => operate('sumar');
+        buttons[2].onclick = () => operate('restar');
+    </script>
+</body>
+
+</html>
